@@ -1,1 +1,6 @@
-# Chat Application
+### Installation
+```sh
+$ npm install
+$ npm start 
+```
+
