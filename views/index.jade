@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  #chat-box(ng-controller='ChatCtrl')
+     //- Usuario sin conectarse al chat
+     .row(ng-if='!userConnect')
+      h3 Usuario
+        form(ng-submit='connect()')
+          input.form-control(type="text", ng-model="form.usuario", placeholder="@andy_ecca" required)
+
+     //- Usuario conectado al chat
+     .row(ng-if='userConnect')
+      .col-lg-2
+        b Usuarios ({{usuarios.length}})
+        ul#box-users
+          li(ng-repeat='u in usuarios track by $index | limitTo: 10')
+           span {{u}}
+      .col-lg-10
+        b Mensajes ( {{mensajes.length}} )
+
+        ul#box-messages(scroll-data="mensajes")
+          li(ng-repeat='m in mensajes track by $index | limitTo : 10')
+            span
+              b @{{m.usuario}}
+              span {{m.mensaje}}
+
+        #box-input
+          form(ng-submit='submit()')
+            input.form-control(type="text", ng-model='form.mensaje' placeholder="Escribir mensaje", required)
+
+
+
+
+

@@ -1,0 +1,43 @@
+body {
+  padding:10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+#chat-box {
+  width: 670px;
+  padding:8px;
+  margin: 0 auto;
+}
+
+#chat-box ul {
+  padding: 7px;
+  margin: 0;
+}
+
+#box-users li {
+  list-style:none;
+  padding: 2px 4px;
+  font-size: 11px;
+}
+
+#box-messages{
+  background: #f3f3f3;
+  height: 200px;
+  overflow-y:scroll;
+}
+
+#box-messages li {
+  list-style: none;
+  padding: 4px 6px;
+  font-style: 12px;
+}
+
+#box-messages li span b{
+  text-transform: lowercase;
+  padding-right: 3px;
+}
